@@ -1,0 +1,93 @@
+/* src/styles/CalendarView.css */
+
+.calendar-container {
+    background-color: #f8faff; /* Light background for the whole calendar section */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+    max-width: 900px; /* Adjust max-width for the date picker centric view */
+    margin: 2rem auto;
+}
+
+.calendar-title {
+    color: #1e3a8a;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+/* Styles for the react-datepicker input field */
+.custom-datepicker-input {
+    width: 100%; /* Make the input take full width of its container */
+    padding: 0.75rem 1rem; /* py-3 px-4 */
+    font-size: 1.125rem; /* text-lg */
+    border: 2px solid #a7c8ff; /* Custom blue border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    color: #1f2937; /* Darker text */
+    background-color: #ffffff;
+}
+
+.custom-datepicker-input::placeholder {
+    color: #9ca3af; /* Placeholder text color */
+}
+
+.custom-datepicker-input:focus {
+    outline: none;
+    border-color: #3b82f6; /* Blue border on focus */
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2); /* Blue ring on focus */
+}
+
+.date-picker-wrapper {
+    /* Optional: To control the width of the date picker input */
+    width: 300px; /* Example fixed width */
+    max-width: 100%;
+}
+
+
+/* --- Appointment List Section Styles (keep these from before) --- */
+.appointment-list-section {
+    background-color: #f0f8ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.appointment-list-section h3 {
+    color: #1e3a8a;
+    border-bottom: 2px solid #bfdbfe;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.appointment-list-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.appointment-list-section li {
+    background-color: #ffffff;
+    border: 1px solid #e0e7ff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.appointment-list-section li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-list-section li p {
+    margin-bottom: 0.3rem;
+    color: #374151;
+}
+
+.appointment-list-section li p strong {
+    color: #1f2937;
+}

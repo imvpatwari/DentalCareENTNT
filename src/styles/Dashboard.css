@@ -1,0 +1,288 @@
+/* src/styles/Dashboard.css */
+
+/* General Dashboard Container */
+.dashboard-container {
+    padding: 0.8rem; /* Even tighter padding for overall container */
+    max-width: 1000px; /* Further reduced max-width for the main content area */
+    margin: 0 auto;
+    background-color: #f7f7fc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Dashboard Card (for welcome, controls) */
+.main-dashboard-card {
+    background-color: #fff;
+    border-radius: 0.75rem; /* Maintain some roundness for the main card */
+    box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.06);
+    padding: 1.5rem; /* Keep a decent padding for the main card */
+    margin-bottom: 1.5rem; /* Space below the main card */
+}
+
+/* Welcome Title */
+.welcome-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: -0.01em;
+    color: #333;
+    font-size: 1.6rem;
+    margin-bottom: 0.15rem;
+}
+
+/* Role Text */
+.role-text {
+    font-style: italic;
+    color: #777;
+    font-size: 0.75rem;
+}
+
+/* Control Group Section (Admin/Patient Buttons) */
+.control-group-section {
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    margin-top: 0.8rem;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    background-color: rgba(255, 255, 255, 0.65);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.01);
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.admin-controls-section {
+    background-color: #f5fcff;
+    border-color: rgba(59, 130, 246, 0.05);
+}
+
+.patient-controls-section {
+    background-color: #fafffa;
+    border-color: rgba(16, 185, 129, 0.05);
+}
+
+/* Control Buttons */
+.control-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.1s ease-in-out;
+    font-weight: 500;
+    letter-spacing: 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    padding: 0.5rem 0.9rem;
+    border-radius: 0.3rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.control-button:hover {
+    transform: translateY(0);
+    box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.06);
+    filter: brightness(1.02);
+}
+
+.control-button::after {
+    width: 1.5px;
+    height: 1.5px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: transform 0.15s, opacity 0.15s;
+}
+
+.control-button:hover::after {
+    transform: scale(10) translate(-50%, -50%);
+}
+
+/* Logout Button */
+.logout-button {
+    transition: all 0.15s ease-in-out;
+    background-color: #fee2e2;
+    color: #ef4444;
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.2rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    font-size: 0.7rem;
+}
+
+.logout-button:hover {
+    transform: scale(1.01);
+    background-color: #dc2626;
+    color: white;
+}
+
+/* KPI Section */
+.dashboard-kpis-section {
+    margin-top: 1.2rem;
+    padding: 1rem; /* Padding for the entire KPI section area */
+    background-color: #fff; /* White background for the whole KPI overview area */
+    border-radius: 0.75rem; /* Rounded corners for the whole KPI overview area */
+    box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.06); /* Shadow for the whole KPI overview area */
+}
+
+.kpi-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #4a5568;
+    margin-bottom: 0.7rem;
+    border-bottom: 1px solid #f2f5f9;
+    padding-bottom: 0.3rem;
+}
+
+/* New KPI Item Styling (no box, just padding and potentially text color) */
+.kpi-item {
+    padding: 0.6rem; /* Minimal padding for individual data blocks */
+    background-color: transparent; /* No background for individual items */
+    border-radius: 0.3rem; /* Small rounding */
+    /* No border or box-shadow to remove the 'box' look */
+}
+
+.kpi-item h3 {
+    font-size: 0.85rem; /* Smaller KPI heading */
+    font-weight: 600;
+    color: #2d3748; /* Default text color */
+    margin-bottom: 0.2rem; /* Reduced margin */
+}
+
+/* Specific KPI Item Colors (for text or borders if desired, not backgrounds) */
+
+.revenue-kpi h3 { color: #2f855a; } /* Darker green for revenue heading */
+.revenue-kpi .revenue-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 0.1rem;
+    color: #2f855a; /* Darker green for revenue value */
+}
+
+.treatment-status-kpi h3 { color: #c53030; } /* Darker red for treatment heading */
+.treatment-status-kpi li { font-size: 0.7rem; }
+.treatment-status-kpi span { font-size: 0.75rem; }
+.treatment-status-kpi .font-semibold { color: #c53030; }
+.treatment-status-kpi .text-yellow-600 { color: #f6ad55; }
+
+
+.appointment-kpi h3 { color: #2b6cb0; } /* Darker blue for appointments heading */
+.appointment-kpi li { font-size: 0.65rem; }
+.appointment-kpi strong { font-size: 0.7rem; }
+.appointment-kpi .text-xs { font-size: 0.55rem; } /* Very small for date */
+
+
+.top-patients-kpi h3 { color: #c05621; } /* Darker orange/brown for top patients heading */
+.top-patients-kpi li { font-size: 0.65rem; }
+.top-patients-kpi .font-semibold { color: #c05621; }
+
+
+.recent-activity-kpi {
+    margin-top: 1rem;
+}
+.recent-activity-kpi h3 {
+    font-size: 0.95rem;
+    color: #4CAF50;
+    border-bottom: 1px solid #e0ffe0; /* A very subtle separator */
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+.recent-activity-kpi h4 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0.2rem;
+}
+.recent-activity-kpi li {
+    font-size: 0.7rem;
+}
+.recent-activity-kpi strong {
+    font-size: 0.75rem;
+}
+.recent-activity-kpi .text-xs {
+    font-size: 0.6rem;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 0.5rem;
+    }
+
+    .main-dashboard-card {
+        padding: 1rem;
+    }
+
+    .welcome-title {
+        font-size: 1.2rem;
+    }
+
+    .control-group-section {
+        gap: 0.3rem;
+        padding: 0.5rem;
+    }
+
+    .control-button, .logout-button {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.75rem;
+    }
+
+    .dashboard-kpis-section {
+        padding: 0.8rem;
+    }
+
+    .kpi-title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .kpi-item {
+        padding: 0.4rem;
+    }
+
+    .revenue-kpi .revenue-value {
+        font-size: 1.3rem;
+    }
+
+    .kpi-item h3 {
+        font-size: 0.75rem;
+    }
+
+    .kpi-item li, .recent-activity-kpi li {
+        font-size: 0.6rem;
+    }
+
+    .recent-activity-kpi h3 {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-container {
+        padding: 0.3rem;
+    }
+    .main-dashboard-card {
+        padding: 0.8rem;
+    }
+    .welcome-title {
+        font-size: 1rem;
+    }
+    .role-text {
+        font-size: 0.65rem;
+    }
+    .control-button, .logout-button {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.5rem;
+    }
+    .dashboard-kpis-section {
+        padding: 0.5rem;
+    }
+    .kpi-title {
+        font-size: 0.9rem;
+    }
+    .revenue-kpi .revenue-value {
+        font-size: 1.1rem;
+    }
+    .kpi-item h3 {
+        font-size: 0.7rem;
+    }
+    .kpi-item li, .recent-activity-kpi li {
+        font-size: 0.55rem;
+    }
+}
